@@ -63,7 +63,15 @@ algorithm over arbitrary sets of n-dimensional data. All you need to do is:
 	}
 
   The library however already comes with a sample implementation, contained in
-  "test.c", and typing "make" this example will be built;
+  "test.c", and typing "make" this example will be built. This example takes 0,
+  1, 2 or 3 command-line arguments, in format
+
+  $ ./kmeans-test [num_elements] [min_value] [max_value]
+
+  and randomly generates a 2-dimensional data set containing num_elements, whose
+  coordinates are between min_value and max_value. The clustering is then
+  performed and the results are shown on stdout, with the clusters coloured in
+  different ways;
 
 - After you write your source, remember to include the file "kmeans.c",
   containing the implementation of the library, in the list of your sources
