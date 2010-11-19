@@ -21,12 +21,25 @@
 #define 	__KMEANS_H
 
 typedef struct __kmeans_t  {
+	/** Input data set */
 	double **dataset;
+
+	/** Number of elements in the data set */
 	int dataset_size;
+
+	/** Dimension of each element of the data set */
 	int dataset_dim;
+
+	/** Number of clusters */
 	int k;
+
+	/** Vector containing the number of elements in each cluster */
 	int *cluster_sizes;
+
+	/** Clusters */
 	double ***clusters;
+
+	/** Coordinates of the centers of the clusters */
 	double **centers;
 } kmeans_t;
 
